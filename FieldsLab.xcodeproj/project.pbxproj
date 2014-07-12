@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57464FE21971AC9C00BD4C01 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 57464FE11971AC9C00BD4C01 /* README.md */; };
 		5799A92319706E7D009DEF56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5799A92219706E7D009DEF56 /* AppDelegate.swift */; };
 		5799A92519706E7D009DEF56 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5799A92419706E7D009DEF56 /* GameScene.sks */; };
 		5799A92719706E7E009DEF56 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5799A92619706E7E009DEF56 /* GameScene.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57464FE11971AC9C00BD4C01 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5799A91D19706E7D009DEF56 /* FieldsLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FieldsLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5799A92119706E7D009DEF56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5799A92219706E7D009DEF56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		5799A91419706E7D009DEF56 = {
 			isa = PBXGroup;
 			children = (
+				57464FE11971AC9C00BD4C01 /* README.md */,
 				5799A91F19706E7D009DEF56 /* FieldsLab */,
 				5799A91E19706E7D009DEF56 /* Products */,
 			);
@@ -196,6 +199,7 @@
 			files = (
 				5799A92719706E7E009DEF56 /* GameScene.swift in Sources */,
 				5799A92919706E7E009DEF56 /* GameViewController.swift in Sources */,
+				57464FE21971AC9C00BD4C01 /* README.md in Sources */,
 				5799A92319706E7D009DEF56 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
