@@ -24,8 +24,11 @@ extension SKNode {
     }
 }
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate
+{
 
+    @IBOutlet var fieldTable : UITableView
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,24 +45,40 @@ class GameViewController: UIViewController {
             scene.scaleMode = .AspectFill
             
             skView.presentScene(scene)
+            
+            fieldTable.reloadData()
+            fieldTable.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: false, scrollPosition: .None)
+            
+            gs.createFieldEnvironment(fieldTypeNames[0])
+            
         }
     }
 
-    override func shouldAutorotate() -> Bool {
-        return true
+    var gs:GameScene {
+        return (view as SKView).scene as GameScene
+    }
+    
+    
+    let fieldTypeNames:Array<FieldTypeNames> = [ .None, .Spring, .RadialGravity, .Drag, .Vortex, .VelocityTexture,
+                                        .Noise, .Turbulence, .Electric, .Magnetic ]
+    
+    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
+    {
+        return fieldTypeNames.count
+    }
+    
+    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
+    {
+        var cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        cell.textLabel.text = fieldTypeNames[ indexPath.row ].toRaw()
+        return cell
     }
 
-    override func supportedInterfaceOrientations() -> Int {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return Int(UIInterfaceOrientationMask.AllButUpsideDown.toRaw())
-        } else {
-            return Int(UIInterfaceOrientationMask.All.toRaw())
-        }
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
+    {
+        var cell = tableView.cellForRowAtIndexPath(indexPath)
+        gs.createFieldEnvironment(FieldTypeNames.fromRaw(cell.textLabel.text)!)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
-    }
+    
     
 }
