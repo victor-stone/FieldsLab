@@ -13,7 +13,6 @@
 		5799A92919706E7E009DEF56 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5799A92819706E7E009DEF56 /* GameViewController.swift */; };
 		5799A92C19706E7E009DEF56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5799A92A19706E7E009DEF56 /* Main.storyboard */; };
 		5799A92E19706E7E009DEF56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5799A92D19706E7E009DEF56 /* Images.xcassets */; };
-		5799A93A19706E7E009DEF56 /* FieldsLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5799A93919706E7E009DEF56 /* FieldsLabTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +35,6 @@
 		5799A92B19706E7E009DEF56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5799A92D19706E7E009DEF56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5799A93319706E7E009DEF56 /* FieldsLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FieldsLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5799A93819706E7E009DEF56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5799A93919706E7E009DEF56 /* FieldsLabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsLabTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				5799A91F19706E7D009DEF56 /* FieldsLab */,
-				5799A93619706E7E009DEF56 /* FieldsLabTests */,
 				5799A91E19706E7D009DEF56 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,23 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				5799A92119706E7D009DEF56 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5799A93619706E7E009DEF56 /* FieldsLabTests */ = {
-			isa = PBXGroup;
-			children = (
-				5799A93919706E7E009DEF56 /* FieldsLabTests.swift */,
-				5799A93719706E7E009DEF56 /* Supporting Files */,
-			);
-			path = FieldsLabTests;
-			sourceTree = "<group>";
-		};
-		5799A93719706E7E009DEF56 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5799A93819706E7E009DEF56 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -225,7 +204,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5799A93A19706E7E009DEF56 /* FieldsLabTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +387,7 @@
 				5799A93F19706E7E009DEF56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5799A94019706E7E009DEF56 /* Build configuration list for PBXNativeTarget "FieldsLabTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +396,7 @@
 				5799A94219706E7E009DEF56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
