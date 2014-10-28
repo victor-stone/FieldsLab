@@ -12,9 +12,9 @@ import SpriteKit
 extension SKNode {
     class func unarchiveFromFile(file : NSString) -> SKNode? {
         
-        let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks")
+        let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks")!
         
-        var sceneData = NSData.dataWithContentsOfFile(path, options: .DataReadingMappedIfSafe, error: nil)
+        var sceneData = NSData(contentsOfURL:NSURL(fileURLWithPath:path)!, options: .DataReadingMappedIfSafe, error: nil)!
         var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
         
         archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
@@ -27,7 +27,7 @@ extension SKNode {
 class GameViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate
 {
 
-    @IBOutlet var fieldTable : UITableView
+    @IBOutlet var fieldTable : UITableView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +46,8 @@ class GameViewController: UIViewController,  UITableViewDataSource, UITableViewD
             
             skView.presentScene(scene)
             
-            fieldTable.reloadData()
-            fieldTable.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: false, scrollPosition: .None)
+            fieldTable!.reloadData()
+            fieldTable!.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: false, scrollPosition: .None)
             
             gs.createFieldEnvironment(fieldTypeNames[0])
             
@@ -62,23 +62,32 @@ class GameViewController: UIViewController,  UITableViewDataSource, UITableViewD
     let fieldTypeNames:Array<FieldTypeNames> = [ .None, .Spring, .RadialGravity, .Drag, .Vortex, .VelocityTexture,
                                         .Noise, .Turbulence, .Electric, .Magnetic ]
     
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return fieldTypeNames.count
     }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         var cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
-        cell.textLabel.text = fieldTypeNames[ indexPath.row ].toRaw()
+        cell.textLabel.text = fieldTypeNames[ indexPath.row ].rawValue
         return cell
     }
 
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
     {
         var cell = tableView.cellForRowAtIndexPath(indexPath)
-        gs.createFieldEnvironment(FieldTypeNames.fromRaw(cell.textLabel.text)!)
+        let text = cell!.textLabel.text!
+        gs.createFieldEnvironment(FieldTypeNames(rawValue: text)!)
     }
+    
+    
+    
+    // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+    // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+    
+    
+    
     
     
 }

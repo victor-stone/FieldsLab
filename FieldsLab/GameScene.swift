@@ -101,7 +101,7 @@ class GameScene: SKScene {
                 impulseMultiplier = 200
                 field = drag
             case .VelocityTexture:
-                println("Not implemented: \(name.toRaw())")
+                println("Not implemented: \(name)")
             case .Noise:
                 var noise = SKFieldNode.noiseFieldWithSmoothness(1.0, animationSpeed: 0.5)
                 bestBodyMass = 0.2
@@ -162,11 +162,11 @@ class GameScene: SKScene {
         var node = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width:20,height:20))
         node.position = emitterPos
         node.physicsBody = SKPhysicsBody(rectangleOfSize: node.size)
-        node.physicsBody.dynamic = true
-        node.physicsBody.charge = charge
+        node.physicsBody!.dynamic = true
+        node.physicsBody!.charge = charge
         charge *= -1.0
-        node.physicsBody.mass = bestBodyMass
-        node.physicsBody.allowsRotation = true
+        node.physicsBody!.mass = bestBodyMass
+        node.physicsBody!.allowsRotation = true
         addChild(node)
         return node
     }
@@ -181,7 +181,7 @@ class GameScene: SKScene {
             if( currentTime - timeMark > emitterThreshold )
             {
                 var node = makeNode()
-                node.physicsBody.applyImpulse( CGVectorMake( node.physicsBody.mass * impulseMultiplier, 50))
+                node.physicsBody!.applyImpulse( CGVectorMake( node.physicsBody!.mass * impulseMultiplier, 50))
                 lastTimeMark = currentTime
             }
         }

@@ -16,16 +16,6 @@
 		5799A92E19706E7E009DEF56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5799A92D19706E7E009DEF56 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5799A93419706E7E009DEF56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5799A91519706E7D009DEF56 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5799A91C19706E7D009DEF56;
-			remoteInfo = FieldsLab;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		57464FE11971AC9C00BD4C01 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5799A91D19706E7D009DEF56 /* FieldsLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FieldsLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,18 +26,10 @@
 		5799A92819706E7E009DEF56 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5799A92B19706E7E009DEF56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5799A92D19706E7E009DEF56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5799A93319706E7E009DEF56 /* FieldsLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FieldsLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5799A91A19706E7D009DEF56 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5799A93019706E7E009DEF56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -70,7 +52,6 @@
 			isa = PBXGroup;
 			children = (
 				5799A91D19706E7D009DEF56 /* FieldsLab.app */,
-				5799A93319706E7E009DEF56 /* FieldsLabTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,24 +98,6 @@
 			productReference = 5799A91D19706E7D009DEF56 /* FieldsLab.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5799A93219706E7E009DEF56 /* FieldsLabTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5799A94019706E7E009DEF56 /* Build configuration list for PBXNativeTarget "FieldsLabTests" */;
-			buildPhases = (
-				5799A92F19706E7E009DEF56 /* Sources */,
-				5799A93019706E7E009DEF56 /* Frameworks */,
-				5799A93119706E7E009DEF56 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5799A93519706E7E009DEF56 /* PBXTargetDependency */,
-			);
-			name = FieldsLabTests;
-			productName = FieldsLabTests;
-			productReference = 5799A93319706E7E009DEF56 /* FieldsLabTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -146,10 +109,6 @@
 				TargetAttributes = {
 					5799A91C19706E7D009DEF56 = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					5799A93219706E7E009DEF56 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 5799A91C19706E7D009DEF56;
 					};
 				};
 			};
@@ -167,7 +126,6 @@
 			projectRoot = "";
 			targets = (
 				5799A91C19706E7D009DEF56 /* FieldsLab */,
-				5799A93219706E7E009DEF56 /* FieldsLabTests */,
 			);
 		};
 /* End PBXProject section */
@@ -180,13 +138,6 @@
 				5799A92E19706E7E009DEF56 /* Images.xcassets in Resources */,
 				5799A92519706E7D009DEF56 /* GameScene.sks in Resources */,
 				5799A92C19706E7E009DEF56 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5799A93119706E7E009DEF56 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,22 +155,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5799A92F19706E7E009DEF56 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5799A93519706E7E009DEF56 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5799A91C19706E7D009DEF56 /* FieldsLab */;
-			targetProxy = 5799A93419706E7E009DEF56 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5799A92A19706E7E009DEF56 /* Main.storyboard */ = {
@@ -336,42 +272,6 @@
 			};
 			name = Release;
 		};
-		5799A94119706E7E009DEF56 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FieldsLab.app/FieldsLab";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = FieldsLabTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		5799A94219706E7E009DEF56 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FieldsLab.app/FieldsLab";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = FieldsLabTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -389,15 +289,6 @@
 			buildConfigurations = (
 				5799A93E19706E7E009DEF56 /* Debug */,
 				5799A93F19706E7E009DEF56 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5799A94019706E7E009DEF56 /* Build configuration list for PBXNativeTarget "FieldsLabTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5799A94119706E7E009DEF56 /* Debug */,
-				5799A94219706E7E009DEF56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
